@@ -23,4 +23,4 @@ jobs:
 
       - name: Reset uat to main
         run: |
-          git push origin origin/main:refs/heads/uat --force
+          git push origin origin/main:refs/heads/uat
