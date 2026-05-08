@@ -1,8 +1,14 @@
 name: Deploy to Azure App Service
 
 on:
-  push:
-    branches: [main]
+  workflow_call:
+    secrets:
+      AZURE_PUBLISH_PROFILE:
+        required: true
+      AZURE_APP_NAME:
+        required: true
+      DJANGO_SECRET_KEY:
+        required: true
 
 jobs:
   deploy:

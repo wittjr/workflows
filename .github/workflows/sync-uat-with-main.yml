@@ -1,11 +1,11 @@
 name: Sync uat with main
 
 on:
-  pull_request:
-    types:
-      - closed
-    branches:
-      - main
+  workflow_call:
+    secrets:
+      SYNC_PAT:
+        description: 'Personal Access Token with repo permissions for syncing branches'
+        required: true
 
 permissions:
   contents: write
